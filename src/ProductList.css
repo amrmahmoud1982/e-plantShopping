@@ -9,6 +9,19 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: 16px; 
+    right: 22px;
+    color: white;
+    padding: 5px;
+    font-size: 22px;
+}
+
 
 /* Navbar */
 .navbar {
@@ -209,8 +222,11 @@ body {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
+  
+
   .product-button:hover {
     background-color: #45a049;
   }
@@ -218,6 +234,11 @@ body {
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
   }
+  .product-button:disabled {
+    background-color: #d3d3d3;
+    color: #7d7d7d; 
+    cursor: not-allowed; 
+}
   @media (max-width: 1200px) {
     .product-card {
       flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
